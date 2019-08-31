@@ -1,0 +1,22 @@
+image: node:current
+
+pipelines:
+  pull-requests:
+    '**': # This runs as default for any branch not elsewhere defined
+      - step:
+          max-time: 10
+          caches:
+            - node
+          script: # Modify the commands below to build your repository.
+            - npm install
+            - npm test
+
+  branches:
+    'master':
+      - step:
+          max-time: 10
+          caches:
+            - node
+          script: # Modify the commands below to build your repository.
+            - npm install
+            - npm test
