@@ -13,7 +13,7 @@ The project is by default configured to:
 
 ## Development
 
-Put your test suites under `__tests__` directory and run `npm test`. If you want Jest to continuousely run the tests then run `npm run watch' command. Please note that tests must be written in Typescript.
+Put your test suites under `__tests__` directory and run `npm test`. If you want Jest to continuousely run the tests then run `npm run watch` command. Please note that tests must be written in Typescript.
 
 ## Continuous Integration
 
