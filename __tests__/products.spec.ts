@@ -13,9 +13,9 @@ import {
   productOfNumbersDevidedBy3And2,
   prodyctOfOddNumberAndHigherThan15,
   productOfPerfectSquaresAndEvenNumbers,
-} from '../src/produse';
+} from '../src/products';
 
-describe('Sume', () => {
+describe('Products', () => {
   it('calculates the product of positive numbers', () => {
     const arr = Object.freeze([1, -4, 2, -1, 3, 3]);
     expect(productPositiveNumbers(arr)).toBe(18);

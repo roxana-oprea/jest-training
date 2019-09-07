@@ -13,9 +13,9 @@ import {
   addsNumbersDevidedBy3And2,
   addsOddNumberAndHigherThan15,
   addPerfectSquaresAndEvenNumbers,
-} from '../src/sume';
+} from '../src/sums';
 
-describe('Sume', () => {
+describe('Sums', () => {
   it('adds positive numbers', () => {
     const arr = Object.freeze([1, -4, 2, -1, 3, 3]);
     expect(addsPositiveNumbers(arr)).toBe(9);
