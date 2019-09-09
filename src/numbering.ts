@@ -44,3 +44,14 @@ export function getElementsPositiveAndDivisibleBy5(arr: readonly number[]): numb
 export function getElementsDevidedBy3And2(arr: readonly number[]): number[] {
   return arr.filter((elem, index) => index % 2 === 0 && elem % 2 === 0 && elem % 3 === 0);
 }
+
+export function getOddElementsBiggerThan15(arr: readonly number[]): number[] {
+  return arr.filter(elem => elem % 2 !== 0 && elem > 15);
+}
+
+export function getPerfectSquaresAndEvenElements(arr: readonly number[]): number[] {
+  return arr.filter(elem => {
+    const number = Math.floor(Math.sqrt(elem));
+    return number * number === elem && elem % 2 === 0;
+  });
+}

@@ -10,6 +10,8 @@ import {
   getElementsInInterval,
   getElementsPositiveAndDivisibleBy5,
   getElementsDevidedBy3And2,
+  getOddElementsBiggerThan15,
+  getPerfectSquaresAndEvenElements,
 } from '../src/numbering';
 
 describe('Numbering', () => {
@@ -66,5 +68,15 @@ describe('Numbering', () => {
   it('returns the elements divided by 3 and 2 and are at even position', () => {
     const arr = Object.freeze([2, 3, 6, 5, 12, 18]);
     expect(getElementsDevidedBy3And2(arr)).toEqual([6, 12]);
+  });
+
+  it('returns the odd elements and bigger than 15', () => {
+    const arr = Object.freeze([23, 33, 6, 5, 12, 19]);
+    expect(getOddElementsBiggerThan15(arr)).toEqual([23, 33, 19]);
+  });
+
+  it('return perfect squares elements which are even', () => {
+    const arr = Object.freeze([4, 9, 19, 5, 16]);
+    expect(getPerfectSquaresAndEvenElements(arr)).toEqual([4, 16]);
   });
 });
