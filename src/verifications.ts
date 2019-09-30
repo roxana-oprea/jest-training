@@ -78,21 +78,21 @@ export function checkArrayForAnyOddNumberAndBiggerThan15(arr: readonly number[])
 
 export function ascendingSort(arr: readonly number[]): number[] {
   const cloneArr = [...arr];
-  const sortedArray = cloneArr.sort((a: number, b: number) => a - b);
+  const sortedArray = cloneArr.sort((a, b) => a - b);
   return sortedArray;
 }
 
 export function descendingSort(arr: readonly number[]): number[] {
   const cloneArr = [...arr];
-  const sortedArray = cloneArr.sort((a: number, b: number) => b - a);
+  const sortedArray = cloneArr.sort((a, b) => b - a);
   return sortedArray;
 }
 
 export function constantArray(arr: readonly number[]): boolean {
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] === arr[i + 1]) return true;
+  for (let i = 0; i < arr.length - 1; i++) {
+    if (arr[i] !== arr[i + 1]) return false;
   }
-  return false;
+  return true;
 }
 
 export function equalLengthOfArrays(arr1: readonly number[], arr2: readonly number[]): boolean {

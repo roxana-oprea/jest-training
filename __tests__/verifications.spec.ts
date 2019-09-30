@@ -91,8 +91,8 @@ describe('Verifications', () => {
   });
 
   it('checks for a constant array', () => {
-    const arr = Object.freeze([16, 16, 16]);
-    expect(constantArray(arr)).toBe(true);
+    const arr = Object.freeze([1, 1, 2]);
+    expect(constantArray(arr)).toBe(false);
   });
 
   it('checks for the equal length of 2 arrays', () => {
