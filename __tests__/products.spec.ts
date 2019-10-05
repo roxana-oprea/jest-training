@@ -46,7 +46,7 @@ describe('Products', () => {
     expect(productNumbersWithEvenIndex(arr)).toBe(-36);
   });
 
-  it('calculate the product of numbers wich are divisible by 3', () => {
+  it('calculate the product of numbers which are divisible by 3', () => {
     const arr = Object.freeze([3, 1, 7, 9]);
     expect(productNumbersDividedBy3(arr)).toBe(27);
   });

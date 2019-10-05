@@ -96,11 +96,7 @@ export function constantArray(arr: readonly number[]): boolean {
 }
 
 export function equalLengthOfArrays(arr1: readonly number[], arr2: readonly number[]): boolean {
-  if (arr1.length === arr2.length) {
-    return true;
-  } else {
-    return false;
-  }
+  return arr1.length === arr2.length;
 }
 
 export function checksFirst3Elements(arr1: readonly number[], arr2: readonly number[]): boolean {
