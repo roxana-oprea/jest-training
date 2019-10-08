@@ -10,6 +10,9 @@ import {
   getTheMaxOfSquares,
   getTheMaxOfNumbersBetweenInterval,
   getTheMaxOfPosNumbersAndDivisibleBy5,
+  getTheMaxFromNumbersOnEvenPositionAndDevisibleBy3,
+  getTheMaximumFromOddNumbersAndBiggerThan15,
+  getTheMaximumFromSquaresandEvenNumbers,
 } from '../src/maximum';
 
 describe('Maximums', () => {
@@ -66,5 +69,20 @@ describe('Maximums', () => {
   it('return the maximum of positive numbers and divisible by 5', () => {
     const arr = Object.freeze([-2, 1, 5, -5, 10]);
     expect(getTheMaxOfPosNumbersAndDivisibleBy5(arr)).toBe(10);
+  });
+
+  it('returns the maximum from numbers which are on even position and divisible by 3', () => {
+    const arr = Object.freeze([3, 1, 6, 9, 5, 2, 8]);
+    expect(getTheMaxFromNumbersOnEvenPositionAndDevisibleBy3(arr)).toBe(6);
+  });
+
+  it('returns the maximum from numbers which are odd ngetTheMaximumFromOddNumbersAndBiggerThan15umbers and bigger than 15', () => {
+    const arr = Object.freeze([3, 7, 2, 8, 4, 9, 21]);
+    expect(getTheMaximumFromOddNumbersAndBiggerThan15(arr)).toBe(21);
+  });
+
+  it('returns the maximum from numbers which are perfect squares elements and even', () => {
+    const arr = Object.freeze([4, 9, 19, 5, 16]);
+    expect(getTheMaximumFromSquaresandEvenNumbers(arr)).toEqual(16);
   });
 });

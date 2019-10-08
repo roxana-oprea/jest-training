@@ -92,3 +92,28 @@ export function getTheMaxOfPosNumbersAndDivisibleBy5(arr: readonly number[]): nu
   }
   return max;
 }
+
+export function getTheMaxFromNumbersOnEvenPositionAndDevisibleBy3(arr: readonly number[]): number {
+  let max = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (i % 2 === 0 && arr[i] % 3 === 0 && arr[i] > max) max = arr[i];
+  }
+  return max;
+}
+
+export function getTheMaximumFromOddNumbersAndBiggerThan15(arr: readonly number[]): number {
+  let max = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 !== 0 && arr[i] > 15 && arr[i] > max) max = arr[i];
+  }
+  return max;
+}
+
+export function getTheMaximumFromSquaresandEvenNumbers(arr: readonly number[]): number {
+  let max = 0;
+  for (let i = 0; i < arr.length; i++) {
+    const number = Math.floor(Math.sqrt(arr[i]));
+    if (number * number === arr[i] && arr[i] % 2 === 0 && arr[i] > max) max = arr[i];
+  }
+  return max;
+}
