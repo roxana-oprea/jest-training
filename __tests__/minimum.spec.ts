@@ -28,7 +28,7 @@ describe('Minimum', () => {
   });
 
   it('returns the minimum from the perfect squares numbers', () => {
-    const arr = Object.freeze([-4, 9, 19, 5, 6, -6]);
-    expect(getTheMinimumFromPerfectSquaresNumbers(arr)).toBe(-4);
+    const arr = Object.freeze([4, 9, 19, 5, 6, -6]);
+    expect(getTheMinimumFromPerfectSquaresNumbers(arr)).toBe(4);
   });
 });
