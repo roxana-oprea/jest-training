@@ -1,16 +1,17 @@
 export function getTheMaximumFromPozitiveNumbers(arr: readonly number[]): number {
-  let max = 0;
+  let max = arr[0];
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i] > 0 && arr[i] < arr[i + 1]) {
-      max = arr[i + 1];
+    if (arr[i] > 0 && arr[i] > max) {
+      max = arr[i];
     }
   }
   return max;
 }
+
 export function getTheMaximumFromNegativeNumbers(arr: readonly number[]): number {
-  let max = 0;
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] < 0 && arr[i] > arr[i + 1]) {
+  let max = arr[0];
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] < 0 && arr[i] > max) {
       max = arr[i];
     }
   }
@@ -18,9 +19,9 @@ export function getTheMaximumFromNegativeNumbers(arr: readonly number[]): number
 }
 
 export function getTheMaximumFromEvenNumbers(arr: readonly number[]): number {
-  let max = 0;
+  let max = arr[0];
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i] % 2 === 0 && arr[i] > arr[i + 1]) {
+    if (arr[i] % 2 === 0 && arr[i] > max) {
       max = arr[i];
     }
   }
@@ -28,7 +29,7 @@ export function getTheMaximumFromEvenNumbers(arr: readonly number[]): number {
 }
 
 export function getTheMaximumFromOddNumbers(arr: readonly number[]): number {
-  let max = 0;
+  let max = arr[0];
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] % 2 !== 0 && arr[i] > max) max = arr[i];
   }
@@ -36,7 +37,7 @@ export function getTheMaximumFromOddNumbers(arr: readonly number[]): number {
 }
 
 export function getTheMaximumFromPerfectSquaresNumbers(arr: readonly number[]): number {
-  let max = 0;
+  let max = arr[0];
   for (let i = 0; i < arr.length; i++) {
     const n = Math.floor(Math.sqrt(arr[i]));
     if (n * n === arr[i] && arr[i] > max) max = arr[i];
@@ -45,7 +46,7 @@ export function getTheMaximumFromPerfectSquaresNumbers(arr: readonly number[]): 
 }
 
 export function getTheMaxFromNumbersOnEvenPosition(arr: readonly number[]): number {
-  let max = 0;
+  let max = arr[0];
   for (let i = 2; i < arr.length; i++) {
     if (i % 2 === 0 && arr[i] > max) max = arr[i];
   }
@@ -53,7 +54,7 @@ export function getTheMaxFromNumbersOnEvenPosition(arr: readonly number[]): numb
 }
 
 export function getTheMAxFromNumbersDivisibleBy3(arr: readonly number[]): number {
-  let max = 0;
+  let max = arr[0];
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] % 3 === 0 && arr[i] > max) max = arr[i];
   }
@@ -61,7 +62,7 @@ export function getTheMAxFromNumbersDivisibleBy3(arr: readonly number[]): number
 }
 
 export function getTheMaxFromNumbersDividedBy5(arr: readonly number[]): number {
-  let max = 0;
+  let max = arr[0];
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] % 5 === 3 && arr[i] > max) max = arr[i];
   }
@@ -69,7 +70,7 @@ export function getTheMaxFromNumbersDividedBy5(arr: readonly number[]): number {
 }
 
 export function getTheMaxOfSquares(arr: readonly number[]): number {
-  let max = 0;
+  let max = arr[0];
   for (let i = 0; i < arr.length; i++) {
     const n = Math.floor(Math.sqrt(arr[i]));
     if (n * n === arr[i] && arr[i] > max) max = arr[i];
@@ -78,7 +79,7 @@ export function getTheMaxOfSquares(arr: readonly number[]): number {
 }
 
 export function getTheMaxOfNumbersBetweenInterval(arr: readonly number[]): number {
-  let max = 0;
+  let max = arr[0];
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] >= -1 && arr[i] <= 9 && arr[i] > max) max = arr[i];
   }
@@ -86,7 +87,7 @@ export function getTheMaxOfNumbersBetweenInterval(arr: readonly number[]): numbe
 }
 
 export function getTheMaxOfPosNumbersAndDivisibleBy5(arr: readonly number[]): number {
-  let max = 0;
+  let max = arr[0];
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] > 0 && arr[i] % 5 === 0 && arr[i] > max) max = arr[i];
   }
@@ -94,7 +95,7 @@ export function getTheMaxOfPosNumbersAndDivisibleBy5(arr: readonly number[]): nu
 }
 
 export function getTheMaxFromNumbersOnEvenPositionAndDevisibleBy3(arr: readonly number[]): number {
-  let max = 0;
+  let max = arr[0];
   for (let i = 0; i < arr.length; i++) {
     if (i % 2 === 0 && arr[i] % 3 === 0 && arr[i] > max) max = arr[i];
   }
@@ -102,7 +103,7 @@ export function getTheMaxFromNumbersOnEvenPositionAndDevisibleBy3(arr: readonly 
 }
 
 export function getTheMaximumFromOddNumbersAndBiggerThan15(arr: readonly number[]): number {
-  let max = 0;
+  let max = arr[0];
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] % 2 !== 0 && arr[i] > 15 && arr[i] > max) max = arr[i];
   }
@@ -110,7 +111,7 @@ export function getTheMaximumFromOddNumbersAndBiggerThan15(arr: readonly number[
 }
 
 export function getTheMaximumFromSquaresandEvenNumbers(arr: readonly number[]): number {
-  let max = 0;
+  let max = arr[0];
   for (let i = 0; i < arr.length; i++) {
     const number = Math.floor(Math.sqrt(arr[i]));
     if (number * number === arr[i] && arr[i] % 2 === 0 && arr[i] > max) max = arr[i];
