@@ -8,6 +8,11 @@ import {
   getTheMinFromNumbersDivisibleBy3,
   getTheMinFromNumbersDividedBy5,
   getTheMinOfSquares,
+  getTheMinOfNumbersBetweenInterval,
+  getTheMinOfPosNumbersAndDivisibleBy5,
+  getTheMinFromNumbersOnEvenPositionAndDevisibleBy3,
+  getTheMinimumFromOddNumbersAndBiggerThan15,
+  getTheMinFromSquaresAndEvenNumbers,
 } from '../src/minimum';
 
 describe('Minimum', () => {
@@ -54,5 +59,30 @@ describe('Minimum', () => {
   it('returns the minimum of squares', () => {
     const arr = Object.freeze([2, 9, 5, 7, 4, 81]);
     expect(getTheMinOfSquares(arr)).toBe(4);
+  });
+
+  it('return the minimum of numbers between [-1, 9] interval', () => {
+    const arr = Object.freeze([2, 12, -1, 8, 16]);
+    expect(getTheMinOfNumbersBetweenInterval(arr)).toBe(-1);
+  });
+
+  it('return the minimum of positive numbers and divisible by 5', () => {
+    const arr = Object.freeze([-2, 1, 5, -5, 10]);
+    expect(getTheMinOfPosNumbersAndDivisibleBy5(arr)).toBe(5);
+  });
+
+  it('returns the minimum from numbers which are on even position and divisible by 3', () => {
+    const arr = Object.freeze([3, 1, 6, 9, 12, 2, 8]);
+    expect(getTheMinFromNumbersOnEvenPositionAndDevisibleBy3(arr)).toBe(6);
+  });
+
+  it('returns the minimum from numbers which are odd and bigger than 15', () => {
+    const arr = Object.freeze([3, 17, 2, 8, 4, 9, 21]);
+    expect(getTheMinimumFromOddNumbersAndBiggerThan15(arr)).toBe(17);
+  });
+
+  it('returns the minimum from numbers which are perfect squares elements and even', () => {
+    const arr = Object.freeze([4, 9, 19, 5, 16]);
+    expect(getTheMinFromSquaresAndEvenNumbers(arr)).toEqual(4);
   });
 });

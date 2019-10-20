@@ -76,7 +76,7 @@ describe('Maximums', () => {
     expect(getTheMaxFromNumbersOnEvenPositionAndDevisibleBy3(arr)).toBe(6);
   });
 
-  it('returns the maximum from numbers which are odd ngetTheMaximumFromOddNumbersAndBiggerThan15umbers and bigger than 15', () => {
+  it('returns the maximum from numbers which are odd and bigger than 15', () => {
     const arr = Object.freeze([3, 7, 2, 8, 4, 9, 21]);
     expect(getTheMaximumFromOddNumbersAndBiggerThan15(arr)).toBe(21);
   });
