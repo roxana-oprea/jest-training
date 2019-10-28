@@ -2,6 +2,8 @@ import {
   getNewArrPozitiveNumbers,
   returnNumDivisibleBy3,
   returnPositionsWithPositiveNum,
+  returnPositionsOfNegativeNum,
+  returnPositions,
 } from '../src/constructions';
 
 describe('Constructions', () => {
@@ -19,5 +21,16 @@ describe('Constructions', () => {
   it('returns an array with the positions with positive numbers', () => {
     const x = Object.freeze([-1, -9, 4, -7, -3, 12]);
     expect(returnPositionsWithPositiveNum(x)).toEqual([2, 5]);
+  });
+
+  it('returns new array containing the positions of negative numbers', () => {
+    const x = Object.freeze([-13, -5, 4, 2, -3, 12]);
+    expect(returnPositionsOfNegativeNum(x)).toEqual([0, 1, 4]);
+  });
+
+  it('returns new array containing the positions of numbers whitch are equals with a given number', () => {
+    const x = Object.freeze([-13, 5, 4, 5, -3, 12]);
+    const number = 5;
+    expect(returnPositions(x, number)).toEqual([1, 3]);
   });
 });

@@ -24,3 +24,19 @@ export function returnPositionsWithPositiveNum(x: readonly number[]): number[] {
   }
   return newArr;
 }
+
+export function returnPositionsOfNegativeNum(x: readonly number[]): number[] {
+  const newArr = [];
+  for (let i = 0; i < x.length; i++) {
+    if (x[i] < 0) newArr.push(i);
+  }
+  return newArr;
+}
+
+export function returnPositions(x: readonly number[], number: number): number[] {
+  const newArr = [];
+  for (let i = 0; i < x.length; i++) {
+    if (x[i] === number) newArr.push(i);
+  }
+  return newArr;
+}
